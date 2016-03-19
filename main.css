@@ -1,0 +1,108 @@
+html {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Raleway', serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 32px;
+}
+#container {
+    width: 1024px;
+    position: fixed;
+}
+#left {
+    margin: 0px;
+    width: 50%;
+    height: 768px;
+    float: left;
+}
+#right {
+    margin: 0px;
+    width: 50%;
+    height: 768px;
+    float: left;
+    background-color: black;
+}
+#menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 16px;
+}
+button {
+    font-size: 16px;
+}
+.dropbtn {
+    position: relative;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    border: none;
+    z-index: 4;
+}
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+.dropdown-content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-left: 33px;
+    padding-top: 30px;
+    background-color: black;
+    min-width: 130px;
+    -webkit-transition: opacity 1s, height 1s ease-in;
+    transition: opacity 1s, height 1s ease-in;
+    opacity: 0;
+    overflow: hidden;
+}
+.dropdown-content a {
+    text-decoration: none;
+    color: white;
+}
+.show {
+    opacity: 1;
+}
+#headerL {
+    text-align: right;
+    width: 100%;
+    line-height: 2;
+}
+#headerR {
+    color: white;
+    width: 512px;
+    line-height: 2;
+}
+#contentL {
+    display: block;
+    text-align: right;
+    max-width: 66%;
+    max-height: auto;
+    margin-top: 16.666%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0;
+}
+#contentR {
+    display: block;
+    max-width: 66%;
+    max-height: auto;
+    margin-top: 16.666%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0;
+    color: white;
+}
