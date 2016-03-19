@@ -19,6 +19,9 @@ h1 {
 h2 {
     font-size: 32px;
 }
+li {
+    list-style-type: none;
+}
 #container {
     width: 1024px;
     position: fixed;
@@ -103,6 +106,13 @@ button {
     margin: 16.666% 3%;
     line-height: 0;
     background-color: black;
+}
+#mainimage{
+    display: block;
+    width: 683px;
+    height: 455px;
+    overflow:hidden;  /* Hides the non selected images */
+    margin: auto;
 }
 #images {
     display: block;
