@@ -18,19 +18,20 @@ h2 {
     font-size: 32px;
 }
 #container {
-    width: 1024px;
+    
+    width: 100%;
     position: fixed;
 }
 #left {
     margin: 0px;
     width: 50%;
-    height: 768px;
+    height: 700px;
     float: left;
 }
 #right {
     margin: 0px;
     width: 50%;
-    height: 768px;
+    height: 700px;
     float: left;
     background-color: black;
 }
