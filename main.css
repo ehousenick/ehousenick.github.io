@@ -120,9 +120,9 @@ h2 {
 .dropdown.hover li {
   transition-delay: 300ms;
 }
-.dropdown li:first-child a {
+/**.dropdown li:first-child a {
   border-radius: 2px 2px 0 0;
-}
+}**/
 .dropdown li:last-child a {
   border-radius: 0 0 2px 2px;
 }
@@ -135,7 +135,7 @@ h2 {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #000;
-  margin: -10px 0 0 30px;
+  margin: -10px 0 0 10px;
 }
 .dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
   background-color: #000;
