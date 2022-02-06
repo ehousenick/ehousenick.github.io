@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splithoof & Friends</title>
+  <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <script>
+    function hoverinsta(element) {
+        element.setAttribute('src', 'images/instagram_inactive.png');
+      }
+    function unhoverinsta(element) {
+        element.setAttribute('src', 'images/instagram.png');
+      }
+    function hovertube(element) {
+          element.setAttribute('src', 'images/youtube_inactive.png');
+      }
+    function unhovertube(element) {
+          element.setAttribute('src', 'images/youtube.png');
+      }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="offset-by-three six columns">
+        <img src="images/shflogo.png" width="150" height="150">
+      </div>
+      <div class="three columns" id="menuheader">
+          <div class="menucontent">
+            <nav>
+                  <div class="dropdown toggle">
+                  <input id="t1" type="checkbox" unchecked>
+                  <label for="t1">Menu</label>
+                  <ul>
+                      <li><a href="home.html">Home</li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                  </ul>
+                  </div>
+            </nav>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <div>
+            <video loop muted autoplay class="header_video">
+              <source src="images/header.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+  </br>
+    <div class="row">
+      <div class="one-half column">
+        <video loop muted autoplay class="smol_video">
+          <source src="images/trust.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="one-half column">
+        <video loop muted autoplay class="smol_video">
+          <source src="images/rednecro.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </br>
+    <div class="row">
+      <div class="one-half column">
+        <video loop muted autoplay class="smol_video">
+          <source src="images/sbm.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="one-half column">
+        <video loop muted autoplay class="smol_video">
+          <source src="images/kma.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-by-ten two columns" style="text-align:right">
+        <a href="https://www.youtube.com/channel/UCcHVD9Z7xQn2lUwjvfCkH4w"><img src="images/youtube.png" onmouseover="hovertube(this);" onmouseout="unhovertube(this);" width="25%" height="25%"></a>
+        <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="images/instagram.png" onmouseover="hoverinsta(this);" onmouseout="unhoverinsta(this);" width="25%" height="25%"></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  background-color: #1b1a1a;
+  color: #cf610f;
+  text-align: center;
+}
+
+#menuheader {
+  position:relative;
+  height: 150px;
+}
+
+#menucontent {
+  font-family: Roboto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align:right;
+}
+
+.header_video {
+  width: 800px;
+  height: 340px;
+}
+
+.smol_video {
+  width: 384px;
+  height: 288px;
+}
+
+.dropdown {
+  width: 100px;
+  display: inline-block;
+  position: absolute;
+  /*top: 20px;
+  left: 20px;*/
+  bottom: 0;
+  right: 0;
+  font-family: Roboto;
+  z-index: 1;
+  text-align: center;
+}
+.dropdown.toggle > input {
+  display: none;
+}
+.dropdown > a, .dropdown.toggle > label {
+  border-radius: 2px;
+  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
+}
+.dropdown > a::after, .dropdown.toggle > label::after {
+  content: "";
+  float: right;
+  margin: 9px 15px 0 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #cf610f;
+}
+.dropdown ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
+  overflow: hidden;
+}
+.dropdown a, .dropdown.toggle > label {
+  display: block;
+  padding: 0 0 0 5px;
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #cf610f;
+  background-color: #222222;
+}
+.dropdown li {
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.dropdown.hover li {
+  transition-delay: 300ms;
+}
+/**.dropdown li:first-child a {
+  border-radius: 2px 2px 0 0;
+}**/
+.dropdown li:last-child a {
+  border-radius: 0 0 2px 2px;
+}
+.dropdown li:first-child a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #222222;
+  margin: -10px 0 0 10px;
+}
+.dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+  background-color: #222222;
+  color: #cf610f;
+}
+.dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+  border-top-color: #cf610f;
+}
+.dropdown li:first-child a:hover::before {
+  border-bottom-color: #222222;
+}
+.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {
+  height: 30px;
+}
+.dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+  padding-top: 15px;
+}
