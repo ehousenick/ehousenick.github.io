@@ -22,7 +22,7 @@
   </script>
 </head>
 <body>
-
+  <div id="wrapper">
     <div id="smallmenu">
           <nav id="mobilenav" role="navigation">
             <div id="menuToggle">
@@ -30,25 +30,24 @@
                 <span></span>
                 <span></span>
                 <span></span>
-            <ul id="menu">
+              <ul id="menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="reel.html">Demo Reel</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
-           </div>
+            </div>
           </nav>
-          <div id="mobilelogo">
-            <img src="Images/shflogo.png" id="logo" alt="Splithoof & Friends">
-          </div>
       </div>
-
+      <div id="mobilelogo">
+        <img src="Images/shflogo.png" alt="SH&F">
+      </div>
 
   <div class="container">
 
     <div class="row" id="largemenu">
       <div class="offset-by-three six columns">
-        <img src="Images/shflogolarge.png" id="logo" alt="Splithoof & Friends">
+        <img src="Images/shflogolarge.png"  alt="Splithoof & Friends">
       </div>
       <div class="three columns" id="menuheader">
           <div id="menucontent">
@@ -91,22 +90,27 @@
     <div class="row">
       <div class="one-half column">
         <video loop muted autoplay playsinline class="smol_video">
-          <source src="Images/sbm.mp4" type="video/mp4">
+          <source src="Images/kma.mp4" type="video/mp4">
         </video>
       </div>
       <div class="one-half column">
         <video loop muted autoplay playsinline class="smol_video">
-          <source src="Images/kma.mp4" type="video/mp4">
+          <source src="Images/sbm.mp4" type="video/mp4">
         </video>
       </div>
     </div>
-    <div class="row">
+    <div id="mobilefooter" style="text-align:right">
+        <a href="https://www.youtube.com/channel/UCcHVD9Z7xQn2lUwjvfCkH4w"><img src="Images/youtube.png" width="25px" height="25px" alt="Youtube"></a>
+        <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="Images/instagram.png" width="25px" height="25px" alt="Instagram"></a>
+    </div>
+    <div class="row" id="desktopfooter">
       <div class="offset-by-ten two columns" style="text-align:right">
         <a href="https://www.youtube.com/channel/UCcHVD9Z7xQn2lUwjvfCkH4w"><img src="Images/youtube.png" onmouseover="hovertube(this);" onmouseout="unhovertube(this);" width="25%" height="25%" alt="Youtube"></a>
         <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="Images/instagram.png" onmouseover="hoverinsta(this);" onmouseout="unhoverinsta(this);" width="25%" height="25%" alt="Instagram"></a>
       </div>
     </div>
   </div>
+</div>
 </body>
 
 </html>

@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
 body {
   background-color: #1b1a1a;
   color: #cf610f;
   text-align: center;
+  overflow-y: scroll;
 }
-
+/*
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+*/
+#wrapper {
+  overflow-x: hidden;
+}
 @media (min-width: 300px) {
   #largemenu {
     visibility: hidden;
@@ -15,6 +30,21 @@ body {
   #smallmenu {
     visibility: visible;
     display:block;
+  }
+  #desktopfooter {
+    visibility: hidden;
+    display: none;
+  }
+  #mobilefooter {
+    visibility: visible;
+    display:block;
+  }
+  #demoreel {
+    width:  95vw;
+    height: 53.439vw; /* 90*9/16 */
+  }
+  .smol_spacing {
+    padding: 0 0 2px;
   }
 }
 
@@ -26,6 +56,29 @@ body {
   #smallmenu {
     visibility: hidden;
     display: none;
+  }
+  #mobilelogo {
+    visibility: hidden;
+    display: none;
+  }
+  #desktopfooter {
+    visibility: visible;
+    display:initial;
+  }
+  #mobilefooter {
+    visibility: hidden;
+    display: none;
+  }
+  .smol_spacing {
+    padding: 0 0 8px;
+  }
+  .smol_video {
+    width: 100%;
+    height: 100%;
+  }
+  #demoreel {
+    width: 800px;
+    height: 450px;
   }
 }
 
@@ -48,10 +101,6 @@ body {
 .smol_video {
   width: 100%;
   height: 100%;
-}
-
-.smol_spacing {
-  padding: 0 0 8px;
 }
 
 /* Large display menu */
@@ -97,8 +146,7 @@ body {
   padding: 0 0 0 5px;
   text-decoration: none;
   line-height: 30px;
-  font-size: 13px;
-  text-transform: uppercase;
+  font-size: 15px;
   color: #cf610f;
   background-color: #222222;
 }
@@ -152,7 +200,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80vw;
 }
 
 #mobilelogo {
@@ -162,6 +210,7 @@ body {
 
 #smallmenu {
   text-align: left;
+  height: 100%;
 }
 
 #smallmenu a {
@@ -251,7 +300,7 @@ body {
 {
   position: absolute;
   width: 50%;
-  height: 1000px;
+  height: 260px;
   box-shadow: 0 0 10px #1b1a1a;
   margin: -50px 0 0 -50px;
   padding: 50px;
