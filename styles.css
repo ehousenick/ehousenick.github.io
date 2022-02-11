@@ -1,44 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
 body {
   background-color: #1b1a1a;
   color: #cf610f;
   text-align: center;
 }
 
+@media (min-width: 300px) {
+  #largemenu {
+    visibility: hidden;
+    display: none;
+  }
+  #smallmenu {
+    visibility: visible;
+    display:block;
+  }
+}
+
+@media (min-width: 700px) {
+  #largemenu {
+    visibility: visible;
+    display:initial;
+  }
+  #smallmenu {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 #menuheader {
-  position:relative;
   height: 150px;
 }
 
 #menucontent {
-  font-family: Roboto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  text-align:right;
+  font-family: 'work sans';
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .header_video {
-  width: 800px;
-  height: 340px;
+  width: 100%;
+  height: 100%;
 }
 
 .smol_video {
-  width: 384px;
-  height: 288px;
+  width: 100%;
+  height: 100%;
 }
 
+.smol_spacing {
+  padding: 0 0 8px;
+}
+
+/* Large display menu */
 .dropdown {
-  width: 100px;
-  display: inline-block;
   position: absolute;
-  /*top: 20px;
-  left: 20px;*/
+  width: 100px;
   bottom: 0;
   right: 0;
-  font-family: Roboto;
+  font-family: 'work sans', 'roboto';
   z-index: 1;
   text-align: center;
 }
@@ -50,14 +72,15 @@ body {
   /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
 }
 .dropdown > a::after, .dropdown.toggle > label::after {
-  content: "";
+  content: "\26E7";
   float: right;
-  margin: 9px 15px 0 0;
-  width: 0;
+  margin: 1px 11px 0 0;
+  font-size: 16px;
+  /*width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 10px solid #cf610f;
+  border-top: 10px solid #ffffff;*/
 }
 .dropdown ul {
   list-style-type: none;
@@ -87,9 +110,9 @@ body {
 .dropdown.hover li {
   transition-delay: 300ms;
 }
-/**.dropdown li:first-child a {
+.dropdown li:first-child a {
   border-radius: 2px 2px 0 0;
-}**/
+}
 .dropdown li:last-child a {
   border-radius: 0 0 2px 2px;
 }
@@ -119,4 +142,134 @@ body {
 }
 .dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
   padding-top: 15px;
+}
+
+/*Small Display Menu*/
+
+#mobilenav {
+  background-color: #1b1a1a;
+  height: 65px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#mobilelogo {
+  position: relative;
+  text-align: center;
+}
+
+#smallmenu {
+  text-align: left;
+}
+
+#smallmenu a {
+  text-decoration: none;
+  color: #1b1a1a;
+  opacity:1;
+  font-family: 'work sans', sans serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: 200ms;
+}
+
+#smallmenu ul {
+  list-style-type: none;
+}
+
+#smallmenu a:hover {
+  opacity:0.5;
+}
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span
+{
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cf610f;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #1b1a1a;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 50%;
+  height: 1000px;
+  box-shadow: 0 0 10px #1b1a1a;
+  margin: -50px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: #cf610f;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 8px 0;
+  transition-delay: 2s;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }

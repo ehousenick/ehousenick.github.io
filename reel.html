@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splithoof & Friends</title>
+  <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <script>
+    function hoverinsta(element) {
+        element.setAttribute('src', 'Images/instagram_inactive.png');
+      }
+    function unhoverinsta(element) {
+        element.setAttribute('src', 'Images/instagram.png');
+      }
+    function hovertube(element) {
+          element.setAttribute('src', 'Images/youtube_inactive.png');
+      }
+    function unhovertube(element) {
+          element.setAttribute('src', 'Images/youtube.png');
+      }
+  </script>
+</head>
+<body>
+  <div id="smallmenu">
+        <nav id="mobilenav" role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reel.html">Demo Reel</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+         </div>
+        </nav>
+        <div id="mobilelogo">
+          <img src="Images/shflogo.png" id="logo" alt="Splithoof & Friends">
+        </div>
+    </div>
+  <div class="container">
+    <div class="row" id="largemenu">
+      <div class="offset-by-three six columns">
+        <img src="Images/shflogolarge.png" id="logo" alt="Splithoof & Friends">
+      </div>
+      <div class="three columns" id="menuheader">
+          <div id="menucontent">
+            <nav>
+                  <div class="dropdown toggle">
+                  <input id="t1" type="checkbox" unchecked>
+                  <label for="t1">Menu</label>
+                  <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="reel.html">Demo Reel</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                  </div>
+            </nav>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <div>
+            <iframe width="800px" height="450px" src="https://www.youtube.com/embed/tBl2jNLUXk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="offset-by-ten two columns" style="text-align:right">
+        <a href="https://www.youtube.com/channel/UCcHVD9Z7xQn2lUwjvfCkH4w"><img src="Images/youtube.png" onmouseover="hovertube(this);" onmouseout="unhovertube(this);" width="25%" height="25%"></a>
+        <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="Images/instagram.png" onmouseover="hoverinsta(this);" onmouseout="unhoverinsta(this);" width="25%" height="25%"></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
