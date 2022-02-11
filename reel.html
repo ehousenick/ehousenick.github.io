@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Splithoof & Friends</title>
   <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
   <link rel="stylesheet" href="styles.css">
@@ -23,47 +23,37 @@
 </head>
 <body>
   <div id="wrapper">
-  <div id="smallmenu">
-        <nav id="mobilenav" role="navigation">
-          <div id="menuToggle">
-            <input type="checkbox" />
-              <span></span>
-              <span></span>
-              <span></span>
-          <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="reel.html">Demo Reel</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-         </div>
-        </nav>
-        <div id="mobilelogo">
-          <img src="Images/shflogo.png" id="logo" alt="Splithoof & Friends">
-        </div>
-    </div>
+
+
   <div class="container">
-    <div class="row" id="largemenu">
-      <div class="offset-by-three six columns">
-        <img src="Images/shflogolarge.png" id="logo" alt="Splithoof & Friends">
-      </div>
-      <div class="three columns" id="menuheader">
-          <div id="menucontent">
-            <nav>
-                  <div class="dropdown toggle">
-                  <input id="t1" type="checkbox" unchecked>
-                  <label for="t1">Menu</label>
-                  <ul>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="reel.html">Demo Reel</a></li>
-                      <li><a href="blog.html">Blog</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                  </div>
+
+
+      <div id="smallmenu">
+            <nav id="mobilenav" role="navigation">
+              <div id="menuToggle">
+                <input type="checkbox" />
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reel.html">Demo Reel</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              </div>
             </nav>
-          </div>
+        </div>
+
+        <div id="mobilelogo">
+          <img src="Images/shflogo.png" height="200px" width="200px" alt="SH&F">
+        </div>
+    <div class="row" id="largemenu">
+      <div class="twelve columns">
+        <img src="Images/shflogolarge.png"  alt="Splithoof & Friends">
       </div>
     </div>
+
     <div class="row">
       <div class="twelve columns">
         <div>
@@ -71,14 +61,19 @@
         </div>
       </div>
     </div>
-    <div class="row">
+
+    <div id="mobilefooter" style="text-align:right">
+        <a href="https://www.youtube.com/channel/UCcHVD9Z7xQn2lUwjvfCkH4w"><img src="Images/youtube.png" width="25px" height="25px" alt="Youtube"></a>
+        <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="Images/instagram.png" width="25px" height="25px" alt="Instagram"></a>
+    </div>
+    <div class="row" id="desktopfooter">
       <div class="offset-by-ten two columns" style="text-align:right">
-        <a href="https://www.youtube.com/channel/UCcHVD9Z7xQn2lUwjvfCkH4w"><img src="Images/youtube.png" onmouseover="hovertube(this);" onmouseout="unhovertube(this);" width="25%" height="25%"></a>
-        <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="Images/instagram.png" onmouseover="hoverinsta(this);" onmouseout="unhoverinsta(this);" width="25%" height="25%"></a>
+        <a href="https://www.youtube.com/channel/UCcHVD9Z7xQn2lUwjvfCkH4w"><img src="Images/youtube.png" onmouseover="hovertube(this);" onmouseout="unhovertube(this);" width="25%" height="25%" alt="Youtube"></a>
+        <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="Images/instagram.png" onmouseover="hoverinsta(this);" onmouseout="unhoverinsta(this);" width="25%" height="25%" alt="Instagram"></a>
       </div>
     </div>
   </div>
-  </div>
+</div>
 </body>
 
 </html>

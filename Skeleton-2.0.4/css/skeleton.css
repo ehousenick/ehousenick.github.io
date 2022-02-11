@@ -183,11 +183,13 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display: inline-block;
+  display: block;
   height: 38px;
+  margin: 8px 0 8px auto;
   padding: 0 30px;
-  color: #555;
-  text-align: center;
+  color: #cf610f;
+  text-align: right;
+  font-family: 'work sans';
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
@@ -197,7 +199,7 @@ input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 1px solid #cf610f;
   cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
@@ -210,8 +212,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
+  color: #D37026;
+  border-color: #D8803E;
   outline: 0; }
 .button.button-primary,
 button.button-primary,
@@ -238,26 +240,32 @@ input[type="button"].button-primary:focus {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+form {
+  width: 100%;
+text-align: right;}
 input[type="email"],
 input[type="number"],
-input[type="search"],
+input[type="name"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 38px;
+  font-family: 'Roboto';
+  color: #151414;
+  height: 32px;
+  margin: 8px 0 0 auto;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
+  background-color: #555;
+  border: 1px solid #1b1a1a;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
-input[type="search"],
+input[type="name"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
@@ -267,10 +275,14 @@ textarea {
      -moz-appearance: none;
           appearance: none; }
 textarea {
-  min-height: 65px;
+  resize: none;
+  float: right;
+  width: 100%;
+  min-height: 120px;
   padding-top: 6px;
   padding-bottom: 6px; }
 input[type="email"]:focus,
+input[type="name"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="text"]:focus,
@@ -279,7 +291,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #cf610f;
   outline: 0; }
 label,
 legend {
@@ -335,17 +347,22 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+table, textarea {
+  margin-right: 0;
+  margin-left: auto; }
+textarea {
+  margin: 4px 0px 0px; }
 th,
 td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  padding: 6px 5px;
+  text-align: right; }
 th:first-child,
 td:first-child {
   padding-left: 0; }
 th:last-child,
 td:last-child {
   padding-right: 0; }
+
 
 
 /* Spacing
@@ -357,7 +374,7 @@ input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 0; }
 pre,
 blockquote,
 dl,
@@ -367,7 +384,7 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 0; }
 
 
 /* Utilities
