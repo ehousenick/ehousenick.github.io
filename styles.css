@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
 body, html {
   height: 100%;
   width: 100%;
   margin: 0;
 }
 body {
-  background-color: #1b1a1a;
+  background-color: #121212;
   font-family: 'work sans';
   color: #cf610f;
   text-align: center;
@@ -24,6 +25,15 @@ body {
   overflow-x: hidden;
 }
 
+
+#largemenu {
+  position: relative;
+}
+
+#orangelogo {
+  position: relative;
+  z-index: 3;
+}
 
 #menuheader {
   height: 150px;
@@ -46,114 +56,173 @@ body {
   height: 100%;
 }
 
-/* Large display menu */
-.dropdown {
-  position: absolute;
-  width: 100px;
-  bottom: 0;
-  right: 0;
-  font-family: 'work sans', 'roboto';
-  z-index: 1;
-  text-align: center;
+.header_video:hover, .smol_video:hover {
+  cursor: pointer;
 }
-.dropdown.toggle > input {
+
+/* Film details */
+#fullscreen {
   display: none;
-}
-.dropdown > a, .dropdown.toggle > label {
-  border-radius: 2px;
-  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
-}
-.dropdown > a::after, .dropdown.toggle > label::after {
-  content: "\26E7";
-  float: right;
-  margin: 1px 11px 0 0;
-  font-size: 16px;
-  /*width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 10px solid #ffffff;*/
-}
-.dropdown ul {
-  list-style-type: none;
-  display: block;
-  margin: 0;
-  padding: 0;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  /*box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);*/
-  overflow: hidden;
+  height: 100%;
+  background-color: #cf610f;
+  z-index: 10;
+  -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.77,0.2,0.05,1.0) both;
+          animation: slide-in-bottom 0.5s cubic-bezier(0.77,0.2,0.05,1.0) both;
 }
-.dropdown a, .dropdown.toggle > label {
-  display: block;
-  padding: 0 0 0 5px;
-  text-decoration: none;
-  line-height: 30px;
-  font-size: 15px;
-  color: #cf610f;
-  background-color: #222222;
+#detail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
-.dropdown li {
-  height: 0;
-  overflow: hidden;
-  transition: all 500ms;
+
+#film_info {
+  position: relative;
+  padding: 0;
+  color: #1b1b1b;
+  /*box-shadow: 0 0 10px #1b1a1a;*/
 }
-.dropdown.hover li {
-  transition-delay: 300ms;
+
+#header {
+  position: relative;
+  display: flex;
+  max-width: 800px;
+  max-height: 450px;
+  margin: auto;
 }
-.dropdown li:first-child a {
-  border-radius: 2px 2px 0 0;
+
+.videoplayer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
 }
-.dropdown li:last-child a {
-  border-radius: 0 0 2px 2px;
+
+#episode, #demoreel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    max-width: 960px;
+    max-height: 540px;
 }
-.dropdown li:first-child a::before {
-  content: "";
-  display: block;
+
+#close {
   position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #222222;
-  margin: -10px 0 0 10px;
-}
-.dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
-  background-color: #222222;
+  top: 9px;
+  right: 10px;
+  z-index: 2;
   color: #cf610f;
 }
-.dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
-  border-top-color: #cf610f;
-}
-.dropdown li:first-child a:hover::before {
-  border-bottom-color: #222222;
-}
-.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {
-  height: 30px;
-}
-.dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
-  padding-top: 15px;
+
+#title {
+  text-align: center;
+  font-family: 'gentium book basic';
 }
 
-/*Small Display Menu*/
+#description {
+  background-color: #cf610f;
+  text-align: left;
+  padding: 5px 10px;
+}
 
+#descript {
+  position: relative;
+  margin: auto;
+  padding-left: 5px;
+  max-width: 400px;
+}
+
+#year {
+  position: relative;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+/* animation slide-in-bottom */
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Film details close button */
+.close-container{
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.leftright{
+  height: 4px;
+  width: 25px;
+  position: absolute;
+  margin-top: 12px;
+  background-color: #cf610f;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all .2s ease-in;
+}
+
+.rightleft{
+  height: 4px;
+  width: 25px;
+  position: absolute;
+  margin-top: 12px;
+  background-color: #cf610f;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all .2s ease-in;
+}
+
+.close-container:hover > div {
+  opacity: .75;
+}
+/* Menu */
 #mobilenav {
-  background-color: #1b1a1a;
+  background-image: 'blankpng.png';
   height: 65px;
   position: absolute;
   top: 0;
   left: 0;
   width: 50vw;
-}
-
-#mobilelogo {
-  position: relative;
-  text-align: center;
+  z-index: 4;
 }
 
 #smallmenu {
   text-align: left;
   height: 100%;
+  z-index: 4;
 }
 
 #smallmenu a {
@@ -180,7 +249,7 @@ body {
   position: relative;
   top: 25px;
   left: 20px;
-  z-index: 1;
+  z-index: 4;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -195,10 +264,10 @@ body {
   position: absolute;
   cursor: pointer;
   opacity: 0;
-  z-index: 2;
+  z-index: 6;
 }
 
-#menuToggle span
+#menuToggle div
 {
   display: flex;
   width: 29px;
@@ -207,36 +276,36 @@ body {
   position: relative;
   background: #cf610f;
   border-radius: 3px;
-  z-index: 1;
+  z-index: 5;
   transform-origin: 5px 0px;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
+#menuToggle div:first-child
 {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
+#menuToggle div:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
+#menuToggle input:checked ~ div
 {
   opacity: 1;
   transform: rotate(45deg) translate(-3px, -1px);
-  background: #1b1a1a;
+  background-color: #121212 !important;
 }
-#menuToggle input:checked ~ span:nth-last-child(3)
+#menuToggle input:checked ~ div:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
+#menuToggle input:checked ~ :nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
@@ -255,6 +324,7 @@ body {
   transform-origin: 0% 0%;
   transform: translate(-500%, 0%);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  z-index: 4;
 }
 
 #menu li
@@ -276,14 +346,6 @@ body {
 
 /* Media Queries */
 @media (min-width: 300px) {
-  #largemenu {
-    visibility: hidden;
-    display: none;
-  }
-  #smallmenu {
-    visibility: visible;
-    display:block;
-  }
   #desktopfooter {
     visibility: hidden;
     display: none;
@@ -291,6 +353,7 @@ body {
   #mobilefooter {
     visibility: visible;
     display:block;
+    margin-top: 7px;
   }
   #demoreel {
     width:  95vw;
@@ -302,29 +365,19 @@ body {
 }
 
 @media (min-width: 700px) {
-  #largemenu {
-    visibility: visible;
-    display:initial;
-    position: relative;
-  }
-  #smallmenu {
-    position: absolute;
-  }
   #menu {
     margin: -50px 0 0 -50px;
     transform: translate(0%, -100%);
   }
   #menuToggle {
     top: 25px;
-    left: 2px;
+    left: 20px;
   }
-  #mobilelogo {
-    visibility: hidden;
-    display: none;
-  }
+
   #desktopfooter {
     visibility: visible;
-    display:initial;
+    display: block;
+    margin-top: 5px;
   }
   #mobilefooter {
     visibility: hidden;
@@ -337,9 +390,5 @@ body {
     width: 100%;
     height: 100%;
   }
-  #demoreel {
-    width: 100%;
-    max-width: 760px;
-    max-height: 428px;
-  }
+
 }

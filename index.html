@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+  <script src="filmdetails.js"></script>
   <script>
     function hoverinsta(element) {
         element.setAttribute('src', 'Images/instagram_inactive.png');
@@ -23,67 +24,82 @@
 </head>
 <body>
   <div id="wrapper">
-
-
   <div class="container">
-
-
       <div id="smallmenu">
             <nav id="mobilenav" role="navigation">
               <div id="menuToggle">
                 <input type="checkbox" />
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <div class="menuspan"></div>
+                  <div class="menuspan"></div>
+                  <div class="menuspan"></div>
                 <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="reel.html">Demo Reel</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="team.html">Team</a></li>
               </ul>
               </div>
             </nav>
         </div>
-
-        <div id="mobilelogo">
-          <img src="Images/shflogo.png" height="200px" width="200px" alt="SH&F">
-        </div>
     <div class="row" id="largemenu">
       <div class="twelve columns">
-        <img src="Images/shflogolarge.png"  alt="Splithoof & Friends">
+        <img src="Images/shflogolarge.png" alt="Splithoof & Friends" id="orangelogo">
       </div>
     </div>
     <div class="row smol_spacing">
       <div class="twelve columns">
-        <div>
-            <video loop muted autoplay playsinline class="header_video">
+            <video loop muted autoplay playsinline class="header_video" onclick="openDetails('dog')">
               <source src="Images/header.mp4" type="video/mp4">
             </video>
-        </div>
       </div>
     </div>
     <div class="row smol_spacing">
       <div class="one-half column">
-        <video loop muted autoplay playsinline class="smol_video">
+        <video loop muted autoplay playsinline class="smol_video" onclick="openDetails('trust')">
           <source src="Images/trust.mp4" type="video/mp4">
         </video>
       </div>
       <div class="one-half column">
-        <video loop muted autoplay playsinline class="smol_video">
+        <video loop muted autoplay playsinline class="smol_video" onclick="openDetails('rednecro')">
           <source src="Images/rednecro.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="row smol_spacing">
+      <div class="one-half column">
+        <video loop muted autoplay playsinline class="smol_video" onclick="openDetails('kma')">
+          <source src="Images/kma.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="one-half column">
+        <video loop muted autoplay playsinline class="smol_video" onclick="openDetails('sbm')">
+          <source src="Images/sbm.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="row smol_spacing">
+      <div class="one-half column">
+        <video loop muted autoplay playsinline class="smol_video" onclick="openDetails('cadaver')">
+          <source src="Images/cadaver.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="one-half column">
+        <video loop muted autoplay playsinline class="smol_video" onclick="openDetails('syb')">
+          <source src="Images/syb.mp4" type="video/mp4">
         </video>
       </div>
     </div>
     <div class="row">
       <div class="one-half column">
-        <video loop muted autoplay playsinline class="smol_video">
-          <source src="Images/kma.mp4" type="video/mp4">
+        <video loop muted autoplay playsinline class="smol_video" onclick="openDetails('janitor')">
+          <source src="Images/janitor.mp4" type="video/mp4">
         </video>
       </div>
       <div class="one-half column">
-        <video loop muted autoplay playsinline class="smol_video">
+        <!---<video loop muted autoplay playsinline class="smol_video">
           <source src="Images/sbm.mp4" type="video/mp4">
-        </video>
+        </video>--->
+        <img src="Images/skits.png" width="100%" height="100%" onclick="openDetails('skits')">
       </div>
     </div>
     <div id="mobilefooter" style="text-align:right">
@@ -96,6 +112,28 @@
         <a href="https://www.instagram.com/splithoofandfriends/?hl=en"><img src="Images/instagram.png" onmouseover="hoverinsta(this);" onmouseout="unhoverinsta(this);" width="25%" height="25%" alt="Instagram"></a>
       </div>
     </div>
+  </div>
+    <div id="fullscreen">
+    <div class="container" id="detail">
+      <div class="row">
+        <div class="twelve columns" id="film_info">
+            <div id="header">
+              <div class="close-container" onclick="closeDetails()">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+              </div>
+              <img id="headerimage" width="100%" height="100%">
+            </div>
+            <div id="description">
+              <h4 id="title"></h4>
+              <div id="descript">
+                <span id="filmdescription"></span>
+              <div><h6 id="year">2020</h6></div>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
   </div>
 </div>
 </body>
