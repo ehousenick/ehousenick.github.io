@@ -2,10 +2,6 @@ function openDetails(name) {
   fullscreen.style.display = "block";
   fullscreen.classList.add("slide-in-bottom");
 
-  setTimeout(function() {
-    orangelogo.src = "Images/shflogodark.png";
-  }, 250);
-
   var allspans = document.getElementsByClassName('menuspan');
   for (var i = 0; i < allspans.length; i++) {
     allspans[i].style.background = '#121212';
@@ -73,7 +69,6 @@ function openDetails(name) {
 function closeDetails() {
   fullscreen.style.display = "none";
   document.getElementById("linktext").textContent="watch now";
-  orangelogo.src="Images/shflogolarge.png";
   var allspans = document.getElementsByClassName('menuspan');
   for (var i = 0; i < allspans.length; i++) {
     allspans[i].style.background = '#cf610f';
