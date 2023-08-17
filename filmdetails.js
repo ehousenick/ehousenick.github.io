@@ -12,8 +12,8 @@ function openDetails(name) {
   if (name === 'dog') {
     document.getElementById("headerimage").src = "Images/Stills/dog.png";
     document.getElementById("title").textContent="Dog From A Graveyard";
-    document.getElementById("filmdescription").textContent="A mysterious yet adorable dog arises from his century long slumber, determined to find the best no-budget short films ever made.";
-    document.getElementById("year").textContent="tba";
+    document.getElementById("filmdescription").textContent="A mysterious dog ventures home after his shift at the graveyard to watch three haunting horror films.";
+    document.getElementById("year").textContent="2023";
     document.getElementById("linktext").textContent="";
   } else if (name === 'trust') {
     document.getElementById("headerimage").src = "Images/Stills/trust.png";
@@ -28,10 +28,10 @@ function openDetails(name) {
     document.getElementById("year").textContent="2022";
     document.getElementById("linktext").textContent="";
   } else if (name === 'sbm') {
-    document.getElementById("headerimage").src = "Images/Stills/placeholder.png";
+    document.getElementById("headerimage").src = "Images/Stills/sbm.png";
     document.getElementById("title").textContent="The Stinkbugman Man";
     document.getElementById("filmdescription").textContent="When the exterminator should be exterminated.";
-    document.getElementById("year").textContent="tba";
+    document.getElementById("year").textContent="2023";
     document.getElementById("linktext").textContent="";
   } else if (name === 'kma') {
     document.getElementById("headerimage").src = "Images/Stills/kma.png";
